@@ -1,0 +1,7 @@
+node_modules/
+target/
+.idl/
+.typegen/
+**/*.rs.bk
+.env
+.DS_Store

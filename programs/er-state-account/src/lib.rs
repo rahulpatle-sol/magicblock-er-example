@@ -52,5 +52,26 @@ pub mod er_state_account {
         
         Ok(())
     }
-}
 
+    pub fn request_vrf(
+        ctx: Context<RequestVrf>,
+        randomness_account: Pubkey,
+    ) -> Result<()> {
+        ctx.accounts.request_vrf(randomness_account)
+    }
+
+    pub fn settle_vrf(ctx: Context<SettleVrf>) -> Result<()> {
+        ctx.accounts.settle_vrf()
+    }
+
+    pub fn request_vrf_er(
+        ctx: Context<RequestVrfEr>,
+        randomness_account: Pubkey,
+    ) -> Result<()> {
+        ctx.accounts.request_vrf_er(randomness_account)
+    }
+
+    pub fn settle_vrf_er(ctx: Context<SettleVrfEr>) -> Result<()> {
+        ctx.accounts.settle_vrf_er()
+    }
+}
